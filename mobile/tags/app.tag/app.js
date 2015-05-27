@@ -23,7 +23,8 @@
   var api = new Api(ls);
   var helper = new RiotHelper();
   
-
+  //hide splash
+  document.getElementById('splashscreen').style.display = 'none';
 
 
   //load data from server
@@ -169,6 +170,11 @@
   updateGeo();
 
 
+  self.goToMain = function(){
+    location.hash = 'main';
+  }
+
+
 
   //notifications
   self.nf = {
@@ -212,6 +218,10 @@
     console.log('Submitting JSON', json);
     api.postJSON('subscribe', json, function(data){
       console.log('result', data);
+<<<<<<< HEAD
+=======
+      location.hash='notifications-success';
+>>>>>>> master
     });
   }
 
